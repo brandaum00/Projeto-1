@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset='utf-8'>
+        <meta name="description" content="Projeto do BLOCO 1">
+        <title>Projeto do BLOCO 1 | Construímos a primeira página</title>
+    </head>
+
+    <body>
+        <h1>HTML básico</h1>
+        <p>HTML (Linguagem de Marcação de Hipertexto) é o código que você usa para estruturar uma página web e seu conteúdo.<br> 
+            Por exemplo, o conteúdo pode ser estruturado em parágrafos, em uma lista com marcadores ou usando imagens e tabelas. <br>
+            Como o título sugere, este artigo fornecerá uma compreensão básica do HTML e suas funções.
+        </p><br>
+            <h2>Então, o que é HTML?</h2>
+            <p>HTML não é uma linguagem de programação; é uma <em>linguagem de marcação de texto</em>, usada para definir a estrutura do seu conteúdo.<br> 
+                HTML consiste de uma série de <a href="https://developer.mozilla.org/pt-BR/docs/Glossary/Element">elementos</a>, que você usa para delimitar 
+                ou agrupar diferentes partes do conteúdo para que ele apareça ou atue de determinada maneira. <br>
+                As <a href="https://developer.mozilla.org/pt-BR/docs/Glossary/Tag">tags</a> anexas podem transformar uma palavra ou imagem num hiperlink, 
+                pode colocar palavras em itálico, pode aumentar ou diminuir a fonte e assim por diante.<br>
+                Por exemplo, veja a seguinte linha de conteúdo:
+            </p>
+                
+                
+                <p><span>Meu gatinho é muito mal humorado</span></p>
+                
+                <p>Se quiséssemos que a linha permanecesse por si só, poderíamos especificar que é um parágrafo colocando-a em uma tag de parágrafo:</p>
+
+                <p><span>&ltp&gtMeu gatinho é muito mal humorado&lt/p&gt</span></p>
+                
+                <h3>Anatomia de um elemento HTML</h3>
+                <p>Vamos explorar esse parágrafo mais profundamente.</p>
+                <img src="img/img1.png" style="width: 450px"><br>
+                <p>As principais partes de um elemento são:</p>
+
+                <ol>
+                    <li>A tag de abertura: Consiste no nome do elemento (no caso, p), envolvido em parênteses angulares de abertura e fechamento.<br> 
+                        Isso demonstra onde o elemento começa, ou onde seu efeito se inicia — nesse caso, onde é o começo do parágrafo.</li>
+                    <li> A tag de fechamento: Isso é a mesma coisa que a tag de abertura, exceto que inclui uma barra antes do nome do elemento.<br> 
+                        Isso demonstra onde o elemento acaba — nesse caso, onde é o fim do parágrafo. Esquecer de incluir uma tag de fechamento é um dos<br> 
+                        erros mais comuns de iniciantes e pode levar a resultados estranhos.</li>
+                    <li>O conteúdo: Esse é o conteúdo do elemento, que nesse caso é apenas texto.</li>
+                    <li>O elemento: A tag de abertura, a de fechamento, e o conteúdo formam o elemento.</li>
+                </ol>
+                <p>Elementos também podem ter atributos, que parecem assim:</p>
+
+                <img src="img/img2.png" style="width: 450px"><br>
+
+                <p>Atributos contém informação extra sobre o elemento que você não quer que apareça no conteúdo real. Aqui,  <br>
+                    class  é o nome do atributo e  editor-note  é o valor do atributo. O atributo  class  permite que você forneça ao elemento um <br>
+                    identificador que possa ser usado posteriormente para aplicar ao elemento informações de estilo e outras coisas.<br><br>
+                    Um atributo sempre deve ter:
+                </p>
+                <ul>
+                    <li>Um espaço entre ele e o nome do elemento (ou o atributo anterior, se o elemento já tiver um).</li>
+                    <li>O nome do atributo, seguido por um sinal de igual.</li>
+                    <li> Aspas de abertura e fechamento, envolvendo todo o valor do atributo</li>
+                </ul>
+            <h3>Aninhando elementos</h3>
+
+            <p>Você pode colocar elementos dentro de outros elementos também — isso é chamado de <strong>aninhamento.</strong><br>
+                 Se quiséssemos afirmar que nosso gato é muito mal-humorado,
+                poderíamos envolver a palavra "muito" em um elemento <br>
+                <span>&ltstrong&gt</span>, o que significa que a palavra deve ser fortemente enfatizada:
+            </p>
+
+                <p><span>&ltp&gtMeu gatinho é &ltstrong&gtmuito&lt/strong&gt mal humorado&lt/p&gt</span></p>
+
+                <p>Você precisa, no entanto, certificar-se de que seus elementos estejam adequadamente aninhados. <br>
+                    No exemplo acima, abrimos primeiro o elemento &ltp&gt, depois o elemento &ltstrong&gt; <br>
+                    portanto, temos que fechar primeiro o elemento &ltstrong&gt, depois o elemento &lt/p&gt. <span>O código abaixo está incorreto</span>:
+                </p>
+
+                <p><span>&lt;p&gt;Meu gatinho é &ltstrong&gtmuito mal humorado&lt;/p&gt;&lt;/strong&gt;</span></p>    
+
+                <p>Os elementos precisam ser abertos e fechados corretamente para que eles estejam claramente visíveis dentro ou fora um do outro. <br>
+                    Se eles se sobrepuserem conforme mostrado acima, seu navegador tentará adivinhar o que você estava tentando dizer, <br>
+                    o que pode levar a resultados inesperados. Então não faça isso!
+                </p>
+
+                    <h3>Elementos vazios</h3>
+
+                    <p>
+                        Alguns elementos não possuem conteúdo e são chamados de elementos vazios. Considere o elemento &ltimg&gt que temos na nossa página HTML:
+                    </p>
+                    <p><span>&lt;img src="imagens/firefox-icon.png" alt="Minha imagem de teste"&gt;</span></p>
+                    <p>Ele contém dois atributos, mas não há tag <img> de fechamento, e não há conteúdo interno. Isso acontece porque um elemento de imagem não <br>
+                        envolve conteúdo para ter efeito em si mesmo. Sua proposta é incorporar uma imagem na página HTML no lugar que o código aparece.
+                    </p>
+                    <h2>Referências de entidades: incluindo caracteres especiais no HTML</h2>
+                    <p>
+                        No HTML, os caracteres &lt;, &gt;, &quot;, &apos; e o &amp; são caracteres especiais. Eles fazem parte da própria sintaxe HTML; portanto,<br> 
+                        como você inclui um desses caracteres no seu texto? 
+                        Por exemplo, se você realmente deseja usar um e comercial ou sinal de menor que, e não tenha ele interpretado como código.
+                    </p>
+                    <table border="1">
+                        <tr><th>Caractere literal</th>
+                            <th>Referência de caractere equivalente</th></tr>
+                        <tr><td>&lt</td>
+                            <td>&amp;lt</td></tr>
+                        <tr><td>&gt;</td>
+                            <td>&amp;gt</td></tr>
+                        <tr><td>&quot;</td>
+                            <td>&amp;quote</td></tr>
+                        <tr><td>&apos;</td>
+                            <td>&amp;apos</td></tr>
+                        <tr><td>&amp;</td>
+                            <td>&amp;amp</td></tr>     
+                    </table>
+                    <p><small>Adaptação da página<a href="https://developer.mozilla.org/pt-BR/docs/Learn/Getting_started_with_the_web/HTML_basics"> HTML básico - 
+                        Aprendendo desenvolvimento web | MDN</a></small>
+                    </p>
+
+    </body>
+</html>
